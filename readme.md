@@ -9,4 +9,4 @@ fyi, that is not the actual port
 
 - database has seeded data, great for testing the update and delete functionalities
 
-- a clean error page when required inputs are omitted without the stacktraces (long, gibberish error links for non-coders)
+- a clean error page when required inputs are omitted without the stacktraces (long, gibberish error lines for non-coders)
