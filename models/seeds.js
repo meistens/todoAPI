@@ -1,6 +1,6 @@
 // purpose of file is to populate the database with initial data before adding more on the browser or postman
 
-const Tasks = require('./models/tasks');
+const Tasks = require('./tasks');
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost:27017/todoDB',

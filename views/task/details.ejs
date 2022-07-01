@@ -11,6 +11,12 @@
    <ul>
       <li>Description: <%= foundID.description %></li>
    </ul>
-   <!-- timestamps addition in progress -->
+   <a href="/tasks">Back to homepage</a>
+   <a href="/tasks/<%=foundID._id%>/edit">Edit task</a>
+
+<!-- delete button using method-override -->
+   <form action="/tasks/<%=foundID._id%>?_method=delete" method="post">
+<button>Delete</button>
+   </form>
 </body>
 </html>

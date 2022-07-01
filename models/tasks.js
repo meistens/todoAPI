@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 //schema
-const tasksSchema = new mongoose.Schema({
+const tasksSchema = new Schema({
    title: {
       type: String,
       required: true
@@ -12,7 +13,5 @@ const tasksSchema = new mongoose.Schema({
    }
 }, { timestamps: true });
 
-//compile module and exporting
-const Tasks = mongoose.model('Tasks', tasksSchema);
 
-module.exports = Tasks;
+module.exports = mongoose.model('Tasks', tasksSchema);
