@@ -17,11 +17,6 @@ mongoose.connect('mongodb://localhost:27017/todoDB', {
    .catch(err => console.log(err));
 
 
-//ejs directory path setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-
 //middlewares
 app.use(json());
 app.use(express.urlencoded({ extended: true }));
