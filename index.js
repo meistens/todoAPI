@@ -4,8 +4,8 @@ const path = require('path');
 const models = require('./models/tasks');
 const routes = require('./routes/todoRoute');
 const Tasks = require('./controllers/todoController');
-const methodOverride = require('method-override');
-const testError = require('./Error')
+const testError = require('./Error');
+const { json, urlencoded } = require('express');
 
 //mongoose setup
 const mongoose = require('mongoose');
@@ -23,8 +23,8 @@ app.set('view engine', 'ejs');
 
 
 //middlewares
-app.use(express.urlencoded({ extended: true }))
-app.use(methodOverride('_method'))
+app.use(json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/', routes);
 

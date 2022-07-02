@@ -6,17 +6,18 @@ const controller =  require('../controllers/todoController');
 // GET route
 router.get('/tasks', controller.getTodo);
 
-// create and save a task routes
-router.get('/tasks/new', controller.createTodo);
+// // create and save a task routes
+// router.get('/tasks/new', controller.createTodo);
 
-router.post('/tasks', controller.saveTodo);
+router.post('/tasks/new', controller.saveTodo);
 
-// Todo details page with GET route
-router.get('/tasks/:id', controller.infoTodo);
+// GET single todo route
+router.get('/tasks/:id', controller.singleTodo);
 
-// Routes for task updates
-router.get('/tasks/:id/edit', controller.fetchTodo);
+// // Routes for task updates
+// router.get('/tasks/:id/edit', controller.fetchTodo);
 
+// update todo route
 router.put('/tasks/:id', controller.updateTodo);
 
 // DELETE route
